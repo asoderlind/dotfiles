@@ -1,0 +1,7 @@
+#Application
+
+super + w
+	"$BROWSER"
+
+super + d
+	dmenu_run
