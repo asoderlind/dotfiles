@@ -1,0 +1,9 @@
+setxkbmap se
+picom --experimental-backends &
+dwmblocks &
+xset r rate 300 50 &			# increase keypress time
+xrdb "$HOME/.config/x11/xresources"	# load xresources
+sxhkd &					# keybindings
+xwallpaper --zoom /home/axel/.local/share/bg
+exec dwm
+
