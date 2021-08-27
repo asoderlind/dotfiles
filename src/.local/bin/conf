@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd "$HOME"/repos/dotfiles/src/.config
+configfile="$(fd -H -L -t f | fzf)"
+"$EDITOR" "$configfile"

@@ -5,3 +5,5 @@ super + w
 
 super + d
 	dmenu_run
+
+
