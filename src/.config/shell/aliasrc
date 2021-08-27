@@ -39,3 +39,8 @@ alias \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
 	z="zathura"
+
+# Other custom aliases
+alias \
+	stowdot="stow -t ~ src"
+

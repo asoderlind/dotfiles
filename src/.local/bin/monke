@@ -1,0 +1,18 @@
+#!/bin/bash
+
+push () {
+    rsync -vrltzP --progress --update "$@" "$HOME/cloud/" monkebrain.com:cloud/
+}
+
+pull () {
+    rsync -vrltzP --progress --update "$@" monkebrain.com:cloud/ "$HOME/cloud/" 
+}
+
+if [ ! -d "$HOME/cloud" ]; then
+    mkdir -p "$HOME/cloud"
+fi
+
+case "$1" in
+    "push") shift; push "$@" ;;
+    "pull") shift; pull "$@" ;;
+esac

@@ -6,6 +6,7 @@ export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="firefox"
+export NOTES_DIR="$HOME/cloud/notes"
 
 # clean ~
 export XDG_CONIFG_HOME="$HOME/.config"
