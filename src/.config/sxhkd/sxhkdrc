@@ -6,4 +6,5 @@ super + w
 super + d
 	dmenu_run
 
-
+{XF86MonBrightnessUp,XF86MonBrightnessDown}
+	xbacklight -{inc,dec} 5
