@@ -1,0 +1,2 @@
+set icons
+set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
