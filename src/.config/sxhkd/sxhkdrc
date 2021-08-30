@@ -8,3 +8,6 @@ super + d
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
 	xbacklight -{inc,dec} 5
+
+{XF86AudioLowerVolume, XF86AudioRaiseVolume}
+	pamixer --allow-boost -{d,i} 5 && kill -44 $(pidof dwmblocks)
