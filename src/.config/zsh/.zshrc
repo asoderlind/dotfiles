@@ -44,3 +44,9 @@ lfcd () {
 bindkey -s '^o' 'lfcd\n'
 bindkey -s '^a' 'bc -lq\n'
 bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
+
+# ls after cd
+chpwd() ls -a
+
+source ~/.config/zsh/keybindings
+source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
