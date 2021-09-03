@@ -1,0 +1,9 @@
+#!/bin/bash
+
+weather="$(curl 'https://wttr.in/?format=%t+%c\n')"
+
+if [[ $weather =~ Unknown ]]; then
+	echo "unknown loc. 摒"
+else
+	echo "$weather"
+fi

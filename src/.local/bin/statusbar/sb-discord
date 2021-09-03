@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pidof Discord > /dev/null || exit 0
+
+echo "ﭮ"
