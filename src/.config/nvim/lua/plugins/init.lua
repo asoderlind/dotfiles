@@ -10,6 +10,10 @@ local use = packer.use
 return packer.startup(function()
 
   use {
+    "nvim-lua/plenary.nvim",
+  }
+
+  use {
     "wbthomason/packer.nvim",
     event = "VimEnter",
   }
@@ -41,4 +45,15 @@ return packer.startup(function()
         require "plugins.configs.icons"
      end,
   }
+
+  use {
+    "nvim-telescope/telescope.nvim",
+    config = function()
+        require "plugins.configs.telescope"
+    end,
+    setup = function()
+        require("core.mappings").telescope()
+    end,
+  }
+
 end)
