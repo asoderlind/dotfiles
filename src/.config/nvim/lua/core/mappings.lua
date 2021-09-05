@@ -1,5 +1,4 @@
 vim.g.mapleader = ","
-local set = vim.opt
 local map = vim.api.nvim_set_keymap
 
 --- Basics
@@ -20,8 +19,8 @@ map('v', '<', '<gv', {noremap=true})
 map('v', '>', '>gv', {noremap=true})
 
 -- use alt + hjkl to resize windows 
-map('n', '<M-j>', ':resize -2<CR>', {noremap=true})
-map('n', '<M-k>', ':resize +2<CR>', {noremap=true})
+map('n', '<M-j>', ':resize +2<CR>', {noremap=true})
+map('n', '<M-k>', ':resize -2<CR>', {noremap=true})
 map('n', '<M-h>', ':vertical resize -2<CR>', {noremap=true})
 map('n', '<M-l>', ':vertical resize +2<CR>', {noremap=true})
 
@@ -44,7 +43,9 @@ map('i', '<Leader>p', '<Esc>:w<CR>:!python %<CR>', {noremap=true})
 map('n', '<Leader>p', ':w<CR>:!python %<CR>', {noremap=true})
 
 --- Plugin mappings
-map('n', '<C-n>', 'NvimTreeToggle<CR>', {noremap=true})
-map('n', '<Leader>r', 'NvimTreeRefresh<CR>', {noremap=true})
-map('n', '<Leader>n', 'NvimTreeFindFile<CR>', {noremap=true})
-map('n', '<Leader>t', 'NvimTreeFocus<CR>', {noremap=true})
+
+-- nvimTree
+map('n', '<C-n>',     ':NvimTreeToggle<CR>',   {noremap=true})
+map('n', '<Leader>r', ':NvimTreeRefresh<CR>',  {noremap=true})
+map('n', '<Leader>n', ':NvimTreeFindFile<CR>', {noremap=true})
+map('n', '<Leader>t', ':NvimTreeFocus<CR>',    {noremap=true})
