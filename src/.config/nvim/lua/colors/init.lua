@@ -2,12 +2,12 @@ local M = {}
 
 -- if theme given, load given theme if given, otherwise nvchad_theme
 M.init = function(theme)
-   if not theme then
-      theme = require("core.utils").load_config().ui.theme
-   end
+   
+   -- here we set the theme manually, note: should be same as in highlights.lua
+   theme = 'gruvbox'
 
    -- set the global theme, used at various places like theme switcher, highlights
-   vim.g.nvchad_theme = theme
+   vim.g.my_theme= 'gruvbox'
 
    local present, base16 = pcall(require, "base16")
 
@@ -27,7 +27,7 @@ end
 -- returns a table of colors for givem or current theme
 M.get = function(theme)
    if not theme then
-      theme = vim.g.nvchad_theme
+      theme = vim.g.my_theme
    end
 
    return require("colors.themes." .. theme)

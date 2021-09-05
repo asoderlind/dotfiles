@@ -14,9 +14,16 @@ return packer.startup(function()
     event = "VimEnter",
   }
 
+   -- file managing , picker etc
   use {
-    'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons'
+     "kyazdani42/nvim-tree.lua",
+     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+     config = function()
+        require "plugins.configs.nvimtree"
+     end,
+     setup = function()
+        require("core.mappings").nvimtree()
+     end,
   }
 
   use {

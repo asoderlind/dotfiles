@@ -1,6 +1,8 @@
 vim.g.mapleader = ","
 local map = vim.api.nvim_set_keymap
 
+local M = {}
+
 --- Basics
 
 -- easy caps
@@ -45,7 +47,11 @@ map('n', '<Leader>p', ':w<CR>:!python %<CR>', {noremap=true})
 --- Plugin mappings
 
 -- nvimTree
-map('n', '<C-n>',     ':NvimTreeToggle<CR>',   {noremap=true})
-map('n', '<Leader>r', ':NvimTreeRefresh<CR>',  {noremap=true})
-map('n', '<Leader>n', ':NvimTreeFindFile<CR>', {noremap=true})
-map('n', '<Leader>t', ':NvimTreeFocus<CR>',    {noremap=true})
+M.nvimtree = function()
+        map('n', '<C-n>',     ':NvimTreeToggle<CR>',   {noremap=true})
+        map('n', '<Leader>r', ':NvimTreeRefresh<CR>',  {noremap=true})
+        map('n', '<Leader>n', ':NvimTreeFindFile<CR>', {noremap=true})
+        map('n', '<Leader>t', ':NvimTreeFocus<CR>',    {noremap=true})
+end
+
+return M

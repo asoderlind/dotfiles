@@ -29,7 +29,7 @@ set.updatetime=300
 -- default 1000 ms
 set.timeoutlen=500
 -- we support termguicolors
--- set.termguicolors=true
+set.termguicolors=true
 
 -->> Buffer <<--
 

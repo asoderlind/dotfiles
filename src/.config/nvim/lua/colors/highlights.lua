@@ -20,7 +20,16 @@ local red = colors.red
 local white = colors.white
 local yellow = colors.yellow
 
-local ui = require("core.utils").load_config().ui
+-- non plugin ui configs, available without any plugins
+local ui = {
+   italic_comments = false,
+
+   theme = "gruvbox",
+
+   -- Enable this only if your terminal has the colorscheme set which nvchad uses
+   -- For Ex : if you have onedark set in nvchad , set onedark's bg color on your terminal
+   transparency = true,
+}
 
 -- Define bg color
 -- @param group Group
