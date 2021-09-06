@@ -1,6 +1,6 @@
 local set = vim.opt
 local bo = require('bufopt')
-  
+
 -->> Numers <<--
 
 -- set row numbers
@@ -24,7 +24,7 @@ set.tabstop=2
 
 -->> Window <<--
 --  required to keep multiple buffers open
-set.hidden=true			
+set.hidden=true
 -- make popup menu small
 set.pumheight=10
 -- some language servers don't like backup files
