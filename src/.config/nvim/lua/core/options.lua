@@ -15,12 +15,14 @@ set.relativenumber=false
 set.expandtab=true
 -- good auto indent
 set.autoindent=true
--- another kind of stabstop
-set.softtabstop=2
 -- auto indent
 set.smartindent=true
 -- insert 2 spaces for a tab
-set.tabstop=2
+set.tabstop=3
+-- another kind of stabstop
+set.softtabstop=3
+-- shiftwidth
+set.shiftwidth=3
 
 -->> Window <<--
 --  required to keep multiple buffers open

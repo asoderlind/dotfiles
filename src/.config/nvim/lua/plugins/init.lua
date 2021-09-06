@@ -9,14 +9,14 @@ local use = packer.use
 --- startup and add configure plugins
 return packer.startup(function()
 
-  use {
-    "nvim-lua/plenary.nvim",
-  }
+   use {
+     "nvim-lua/plenary.nvim",
+   }
 
-  use {
-    "wbthomason/packer.nvim",
-    event = "VimEnter",
-  }
+   use {
+     "wbthomason/packer.nvim",
+     event = "VimEnter",
+   }
 
    -- file managing , picker etc
   use {
@@ -92,6 +92,14 @@ return packer.startup(function()
      event = "BufRead",
      config = function()
         require "plugins.configs.treesitter"
+     end,
+  }
+
+  use {
+     "lukas-reineke/indent-blankline.nvim",
+     event = "BufRead",
+     config = function()
+        require "plugins.configs.blankline"
      end,
   }
 
