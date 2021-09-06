@@ -10,8 +10,8 @@ map('i', '<c-u>', '<ESC>viwUi', {noremap=true})
 map('n', '<c-u>', 'viwU<Esc>', {noremap=true})
 
 -- TAB to move between buffers
-map('n', '<TAB>', ':bnext<CR>', {noremap=true})
-map('n', '<S-TAB>', ':bprevious<CR>', {noremap=true})
+-- map('n', '<TAB>', ':bnext<CR>', {noremap=true})
+-- map('n', '<S-TAB>', ':bprevious<CR>', {noremap=true})
 
 -- alternate way to save
 map('n', '<C-s>', ':w<CR>', {noremap=true})
@@ -45,10 +45,10 @@ map('i', '<Leader>p', '<Esc>:w<CR>:!python %<CR>', {noremap=true})
 map('n', '<Leader>p', ':w<CR>:!python %<CR>', {noremap=true})
 -- nvimTree
 M.nvimtree = function()
-        map('n', '<C-n>',     ':NvimTreeToggle<CR>',   {noremap=true})
-        map('n', '<Leader>r', ':NvimTreeRefresh<CR>',  {noremap=true})
-        map('n', '<Leader>n', ':NvimTreeFindFile<CR>', {noremap=true})
-        map('n', '<Leader>t', ':NvimTreeFocus<CR>',    {noremap=true})
+   map('n', '<C-n>',     ':NvimTreeToggle<CR>',   {noremap=true})
+   map('n', '<Leader>r', ':NvimTreeRefresh<CR>',  {noremap=true})
+   map('n', '<Leader>n', ':NvimTreeFindFile<CR>', {noremap=true})
+   map('n', '<Leader>t', ':NvimTreeFocus<CR>',    {noremap=true})
 end
 
 M.telescope = function()
@@ -60,6 +60,11 @@ M.telescope = function()
    map("n", '<leader>fw', ":Telescope live_grep <CR>",   {noremap=true})
    map("n", '<leader>fo', ":Telescope oldfiles <CR>",   {noremap=true})
    map("n", '<leader>th', ":Telescope themes <CR>",   {noremap=true})
+end
+
+M.bufferline = function()
+   map("n", "<TAB>", ":BufferLineCycleNext <CR>", {noremap=true})
+   map("n", "<S-Tab>", ":BufferLineCyclePrev <CR>", {noremap=true})
 end
 
 return M
