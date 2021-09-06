@@ -1,10 +1,32 @@
 setxkbmap se
+
+# Japanese input
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+exec fcitx -d &
+
+# Transparency
 picom --experimental-backends &
+
+# Top bar
 dwmblocks &
-xset r rate 300 50 &			# increase keypress time
-xrdb "$HOME/.config/x11/xresources"	# load xresources
-sxhkd &					# keybindings
+
+# Increase keypress freq
+xset r rate 300 50 &
+
+# Load xresources
+xrdb "$HOME/.config/x11/xresources"
+
+# Keybindings
+sxhkd &
+
+# Wallpaper
 xwallpaper --zoom /home/axel/.local/share/bg
+
+# Notifications
 dunst &
+
+# Window manager
 exec dwm
 
