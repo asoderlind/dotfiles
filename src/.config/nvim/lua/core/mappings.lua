@@ -43,9 +43,6 @@ map('n', '<Leader>vs' ,':source /home/axel/.config/nvim/init.lua<CR>', {noremap=
 -- compiling python
 map('i', '<Leader>p', '<Esc>:w<CR>:!python %<CR>', {noremap=true}) 
 map('n', '<Leader>p', ':w<CR>:!python %<CR>', {noremap=true})
-
---- Plugin mappings
-
 -- nvimTree
 M.nvimtree = function()
         map('n', '<C-n>',     ':NvimTreeToggle<CR>',   {noremap=true})
