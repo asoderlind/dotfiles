@@ -1,10 +1,28 @@
 local set = vim.opt
 local bo = require('bufopt')
-
--->> window <<--
+  
+-->> Numers <<--
 
 -- set row numbers
 set.number=true
+-- show cursor pos
+set.ruler=true
+-- show relative numbers
+set.relativenumber=false
+
+--> Indentline <<--
+-- convert tabs to spaces
+set.expandtab=true
+-- good auto indent
+set.autoindent=true
+-- another kind of stabstop
+set.softtabstop=2
+-- auto indent
+set.smartindent=true
+-- insert 2 spaces for a tab
+set.tabstop=2
+
+-->> Window <<--
 --  required to keep multiple buffers open
 set.hidden=true			
 -- make popup menu small
@@ -12,8 +30,6 @@ set.pumheight=10
 -- some language servers don't like backup files
 set.backup=false
 set.writebackup=false
--- show cursor pos
-set.ruler=true
 -- more space for messages
 set.cmdheight=2
 -- enable mouse
@@ -31,17 +47,6 @@ set.timeoutlen=500
 -- we support termguicolors
 set.termguicolors=true
 
--->> Buffer <<--
-
--- insert 2 spaces for a tab
-bo.tabstop=2
--- convert tabs to spaces
-bo.expandtab=true
--- good auto indent
-set.autoindent=true
--- another kind of stabstop
-bo.softtabstop = 2
-
 -->> Other options <<--
 -- the encoding
 set.encoding='utf-8'
@@ -53,3 +58,4 @@ vim.cmd('language en_US.utf-8')
 vim.cmd('syntax on')
 -- lua syntax
 -- let g:vimsyn_embed == 'lPr'
+set.ignorecase=true
