@@ -42,7 +42,6 @@ lfcd () {
 
 # Keybindings
 bindkey -s '^o' 'lfcd\n'
-bindkey -s '^a' 'bc -lq\n'
 bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
 # ls after cd
