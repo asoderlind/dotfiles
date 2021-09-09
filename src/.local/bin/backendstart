@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Session name
+session="backend"
+
+# Start New Session with our name
+tmux new-session -d -s $session -c "$HOME"/repos/troubleshooter
+
+# Name first Window and start watch
+tmux rename-window -t 0 'Watcher'
+tmux send-keys -t 'Watcher' 'yarn shared:watch' C-m
+
+# Create new window and start frontend
+tmux new-window -t $session:1 -n 'Frontend' -c "$HOME"/repos/troubleshooter
+tmux send-keys -t 'Frontend' 'yarn frontend:start' C-m
+
+# Create new window and start backend
+tmux new-window -t $session:2 -n 'Backend' -c "$HOME"/repos/troubleshooter
+tmux send-keys -t 'Backend' 'yarn backend:start' C-m
+
+# Create new window for looking at the code 
+tmux new-window -t $session:3 -n 'Coding' -c "$HOME"/repos/troubleshooter
+tmux send-keys -t 'Coding' "$EDITOR" C-m
+
+# Attach session, on the code window
+tmux attach-session -t $session:3

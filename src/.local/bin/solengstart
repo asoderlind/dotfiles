@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Session name
+session="soleng"
+
+# Start New Session with our name
+tmux new-session -d -s $session -c "$HOME"/repos/soleng
+
+# Name first Window and enter pipenv
+tmux rename-window -t 0 'pipenv'
+tmux send-keys -t 'pipenv' 'pipenv shell' C-m

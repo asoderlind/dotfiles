@@ -1,0 +1,6 @@
+#!/bin/bash
+
+light="$(xbacklight -get)"
+icon="盛"
+
+echo "$icon ${light%.*}"
