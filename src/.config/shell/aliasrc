@@ -39,6 +39,5 @@ alias \
 
 # Other custom aliases
 alias \
-	stowdot="stow -t ~ src"
   sc="scrot -d 3 ~/cloud/screenshots/%Y-%m-%d-%T-screenshot.png"
 
