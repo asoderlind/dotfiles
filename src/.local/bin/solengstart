@@ -8,4 +8,12 @@ tmux new-session -d -s $session -c "$HOME"/repos/soleng
 
 # Name first Window and enter pipenv
 tmux rename-window -t 0 'pipenv'
+
+# Make a small pane below for executing code
+tmux split-window -v -p 30 -c "$HOME"/repos/soleng
+
+# Start a pipenv shell
 tmux send-keys -t 'pipenv' 'pipenv shell' C-m
+
+# Attach session, on the code window
+tmux attach-session -t $session:0
