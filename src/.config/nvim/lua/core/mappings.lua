@@ -20,7 +20,7 @@ map('n', '<C-s>', ':w<CR>', {noremap=true})
 map('v', '<', '<gv', {noremap=true})
 map('v', '>', '>gv', {noremap=true})
 
--- use alt + hjkl to resize windows 
+-- use alt + hjkl to resize windows
 map('n', '<M-j>', ':resize +2<CR>', {noremap=true})
 map('n', '<M-k>', ':resize -2<CR>', {noremap=true})
 map('n', '<M-h>', ':vertical resize -2<CR>', {noremap=true})
@@ -33,15 +33,15 @@ map('n', '<C-k>', '<C-w>k', {noremap=true})
 map('n', '<C-l>', '<C-w>l', {noremap=true})
 
 -- custom escape
-map('i', 'jk', '<ESC>', {noremap=true, silent=true}) 
-map('i', 'kj', '<ESC>', {noremap=true, silent=true}) 
+map('i', 'jk', '<ESC>', {noremap=true, silent=true})
+map('i', 'kj', '<ESC>', {noremap=true, silent=true})
 
 -- quicker editing and sourcing of init.lua
 map('n', '<Leader>ve' ,':tabnew /home/axel/.config/nvim/init.lua<CR>', {noremap=true})
 map('n', '<Leader>vs' ,':source /home/axel/.config/nvim/init.lua<CR>', {noremap=true})
 
 -- compiling python
-map('i', '<Leader>p', '<Esc>:w<CR>:!python %<CR>', {noremap=true}) 
+map('i', '<Leader>p', '<Esc>:w<CR>:!python %<CR>', {noremap=true})
 map('n', '<Leader>p', ':w<CR>:!python %<CR>', {noremap=true})
 -- nvimTree
 M.nvimtree = function()
