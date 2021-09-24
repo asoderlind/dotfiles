@@ -49,3 +49,4 @@ chpwd() ls -a
 
 source ~/.config/zsh/keybindings
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+

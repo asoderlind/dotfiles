@@ -1,0 +1,2 @@
+#!/bin/bash
+unoconv -f pdf *.svg && mogrify -format png -density 300 -trim -bordercolor white -border 5 *.pdf
