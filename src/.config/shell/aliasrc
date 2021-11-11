@@ -39,5 +39,5 @@ alias \
 
 # Other custom aliases
 alias \
-  sc="scrot -d 3 ~/cloud/screenshots/%Y-%m-%d-%T-screenshot.png"
+  sc="scrot -d 3 ~/cloud/bilder/screenshots/%Y-%m-%d-%T-screenshot.png"
 

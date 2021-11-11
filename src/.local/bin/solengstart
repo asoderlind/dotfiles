@@ -9,6 +9,12 @@ tmux new-session -d -s $session -c "$HOME"/repos/soleng
 # Name first Window and enter pipenv
 tmux rename-window -t 0 'pipenv'
 
+# Start a pipenv shell
+tmux send-keys -t 'pipenv' 'pipenv shell' C-m
+
+# Start vim
+tmux send-keys -t 'pipenv' 'v' C-m
+
 # Make a small pane below for executing code
 tmux split-window -v -p 30 -c "$HOME"/repos/soleng
 
