@@ -43,7 +43,15 @@ map('n', '<Leader>vs' ,':source /home/axel/.config/nvim/init.lua<CR>', {noremap=
 -- compiling python
 map('i', '<Leader>p', '<Esc>:w<CR>:!python %<CR>', {noremap=true})
 map('n', '<Leader>p', ':w<CR>:!python %<CR>', {noremap=true})
--- nvimTree
+
+-- autoclose
+map('i', '"', '""<left>', {noremap=true})
+map('i', "'", "''<left>", {noremap=true})
+map('i', '(', '()<left>', {noremap=true})
+map('i', '[', '[]<left>', {noremap=true})
+map('i', '{̈́', '{}<left>', {noremap=true})
+map('i', '{<CR>', '{<CR>}<ESC>O', {noremap=true})
+
 M.nvimtree = function()
    map('n', '<C-n>',     ':NvimTreeToggle<CR>',   {noremap=true})
    map('n', '<Leader>r', ':NvimTreeRefresh<CR>',  {noremap=true})

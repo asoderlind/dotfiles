@@ -18,11 +18,11 @@ set.autoindent=true
 -- auto indent
 set.smartindent=true
 -- insert 2 spaces for a tab
-set.tabstop=3
+set.tabstop=2
 -- another kind of stabstop
-set.softtabstop=3
+set.softtabstop=2
 -- shiftwidth
-set.shiftwidth=3
+set.shiftwidth=2
 
 -->> Window <<--
 --  required to keep multiple buffers open

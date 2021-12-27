@@ -18,15 +18,24 @@ return packer.startup(function()
      event = "VimEnter",
    }
 
-   -- file managing , picker etc
+  use {
+     "kyazdani42/nvim-web-devicons",
+     after = "nvim-base16.lua",
+     config = function()
+       require "plugins.configs.icons"
+     end,
+  }
+
+  -- file managing , picker etc
   use {
      "kyazdani42/nvim-tree.lua",
-     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+     after = "nvim-web-devicons",
+     cmd = {"NvimTreeToggle", "NvimTreeFocus"},
      config = function()
-        require "plugins.configs.nvimtree"
+       require "plugins.configs.nvimtree"
      end,
      setup = function()
-        require("core.mappings").nvimtree()
+       require("core.mappings").nvimtree()
      end,
   }
 
@@ -34,16 +43,8 @@ return packer.startup(function()
     "NvChad/nvim-base16.lua",
     after = "packer.nvim",
     config = function()
-        require("colors").init()
+       require("colors").init()
     end,
-  }
-
-  use {
-     "kyazdani42/nvim-web-devicons",
-     after = "nvim-base16.lua",
-     config = function()
-        require "plugins.configs.icons"
-     end,
   }
 
   use {
@@ -67,22 +68,17 @@ return packer.startup(function()
      end,
   }
 
-   -- lsp stuff
+  -- lsp stuff
   use {
-     "kabouzeid/nvim-lspinstall",
-     opt = true,
-     setup = function()
-        require("core.utils").packer_lazy_load "nvim-lspinstall"
-        -- reload the current file so lsp actually starts for it
-        vim.defer_fn(function()
-           vim.cmd "silent! e %"
-        end, 0)
+     "williamboman/nvim-lsp-installer",
+     config = function()
+        require "plugins.configs.lspinstaller"
      end,
   }
 
   use {
      "neovim/nvim-lspconfig",
-     after = "nvim-lspinstall",
+     after = "nvim-lsp-installer",
      config = function()
         require "plugins.configs.lspconfig"
      end,
