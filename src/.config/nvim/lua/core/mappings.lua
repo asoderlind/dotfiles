@@ -36,6 +36,8 @@ map('n', '<C-l>', '<C-w>l', {noremap=true})
 map('i', 'jk', '<ESC>', {noremap=true, silent=true})
 map('i', 'kj', '<ESC>', {noremap=true, silent=true})
 
+-- closing
+
 -- quicker editing and sourcing of init.lua
 map('n', '<Leader>ve' ,':tabnew /home/axel/.config/nvim/init.lua<CR>', {noremap=true})
 map('n', '<Leader>vs' ,':source /home/axel/.config/nvim/init.lua<CR>', {noremap=true})
@@ -47,10 +49,12 @@ map('n', '<Leader>p', ':w<CR>:!python %<CR>', {noremap=true})
 -- autoclose
 map('i', '"', '""<left>', {noremap=true})
 map('i', "'", "''<left>", {noremap=true})
-map('i', '(', '()<left>', {noremap=true})
-map('i', '[', '[]<left>', {noremap=true})
-map('i', '{̈́', '{}<left>', {noremap=true})
+-- map('i', '(', '()<left>', {noremap=true})
+-- map('i', '[', '[]<left>', {noremap=true})
+-- map('i', '{̈́', '{}<left>', {noremap=true})
 map('i', '{<CR>', '{<CR>}<ESC>O', {noremap=true})
+map('i', '[<CR>', '[<CR>]<ESC>O', {noremap=true})
+map('i', '(<CR>', '(<CR>)<ESC>O', {noremap=true})
 
 M.nvimtree = function()
    map('n', '<C-n>',     ':NvimTreeToggle<CR>',   {noremap=true})

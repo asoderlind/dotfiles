@@ -21,39 +21,27 @@ cmp.setup {
             nvim_lsp = "[LSP]",
             nvim_lua = "[Lua]",
             buffer = "[BUF]",
+            path = "[Path]",
          })[entry.source.name]
 
          return vim_item
       end,
    },
    mapping = {
-      ["<C-p>"] = cmp.mapping.select_prev_item(),
-      ["<C-n>"] = cmp.mapping.select_next_item(),
+      ["<Tab>"] = cmp.mapping.select_next_item(),
+      ["<S-Tab>"] = cmp.mapping.select_prev_item(),
       ["<C-d>"] = cmp.mapping.scroll_docs(-4),
       ["<C-f>"] = cmp.mapping.scroll_docs(4),
       ["<C-Space>"] = cmp.mapping.complete(),
       ["<C-e>"] = cmp.mapping.close(),
       ["<CR>"] = cmp.mapping.confirm {
-         behavior = cmp.ConfirmBehavior.Replace,
+         behavior = cmp.ConfirmBehavior.Insert,
          select = true,
       },
-      ["<Tab>"] = function(fallback)
-         if vim.fn.pumvisible() == 1 then
-            vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-n>", true, true, true), "n")
-         else
-            fallback()
-         end
-      end,
-      ["<S-Tab>"] = function(fallback)
-         if vim.fn.pumvisible() == 1 then
-            vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-p>", true, true, true), "n")
-         else
-            fallback()
-         end
-      end,
    },
    sources = {
       { name = "nvim_lsp" },
       { name = "buffer" },
+      { name = "path" },
    },
 }
