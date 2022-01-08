@@ -8,7 +8,12 @@ vim.opt.completeopt = "menuone,noselect"
 
 -- nvim-cmp setup
 cmp.setup {
-   formatting = {
+  snippet = {
+    expand = function(args)
+      require("luasnip").lsp_expand(args.body)
+    end,
+  },
+  formatting = {
       format = function(entry, vim_item)
          -- load lspkind icons
          vim_item.kind = string.format(
