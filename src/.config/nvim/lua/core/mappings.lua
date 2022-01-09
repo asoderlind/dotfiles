@@ -32,6 +32,10 @@ map('n', '<C-j>', '<C-w>j', {noremap=true})
 map('n', '<C-k>', '<C-w>k', {noremap=true})
 map('n', '<C-l>', '<C-w>l', {noremap=true})
 
+-- block comment
+map('v', '<Leader>c', ":s/^/\\/\\/<CR>:noh<CR>", {noremap=true})
+map('v', '<Leader>x', ":norm 2x<CR>", {noremap=true})
+
 -- custom escape
 map('i', 'jk', '<ESC>', {noremap=true, silent=true})
 map('i', 'kj', '<ESC>', {noremap=true, silent=true})
@@ -48,8 +52,8 @@ map('i', '<Leader>p', '<Esc>:w<CR>:!python %<CR>', {noremap=true})
 map('n', '<Leader>p', ':w<CR>:!python %<CR>', {noremap=true})
 
 -- autoclose
-map('i', '"', '""<left>', {noremap=true})
-map('i', "'", "''<left>", {noremap=true})
+-- map('i', '"', '""<left>', {noremap=true})
+-- map('i', "'", "''<left>", {noremap=true})
 -- map('i', '(', '()<left>', {noremap=true})
 -- map('i', '[', '[]<left>', {noremap=true})
 -- map('i', '{̈́', '{}<left>', {noremap=true})
