@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "$(sensors thinkpad-isa-0000 | awk '/^temp1/ {print $2}')"
