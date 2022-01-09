@@ -39,5 +39,7 @@ alias \
 
 # Other custom aliases
 alias \
-  sc="scrot -d 3 ~/Dropbox/bilder/screenshots/%Y-%m-%d-%T-screenshot.png"
+  sc="scrot -d 3 ~/Dropbox/bilder/screenshots/%Y-%m-%d-%T-screenshot.png" \
+  su="su -l" \
+  db="sudo -u postgres psql -d postgres://postgres:@localhost:42432" \
 
