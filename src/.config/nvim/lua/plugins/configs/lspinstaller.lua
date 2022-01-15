@@ -1,6 +1,10 @@
 local _, lsp_installer = pcall(require, "nvim-lsp-installer")
 
-local function on_attach(_, bufnr)
+local function on_attach(client, bufnr)
+   -- Avoid conflicts with null_ls
+   client.resolved_capabilities.document_formatting = false
+   client.resolved_capabilities.document_range_formatting = false
+
    -- set keymap for the current buffer
    local function buf_set_keymap(...)
       vim.api.nvim_buf_set_keymap(bufnr, ...)

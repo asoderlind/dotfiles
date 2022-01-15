@@ -26,6 +26,14 @@ return packer.startup(function()
      end,
   }
 
+  use{
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+        require "plugins.configs.null"
+    end,
+    requires = { "nvim-lua/plenary.nvim" },
+  }
+
   -- file managing , picker etc
   use {
      "kyazdani42/nvim-tree.lua",
