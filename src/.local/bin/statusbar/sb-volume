@@ -16,4 +16,4 @@ else
 	iconname="audio-volume-medium"
 fi
 
-echo "$icon $vol"
+echo "^c#ebcb8b^$icon $vol"

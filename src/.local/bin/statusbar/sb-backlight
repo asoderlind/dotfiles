@@ -3,4 +3,4 @@
 light="$(xbacklight -get)"
 icon="盛"
 
-echo "$icon ${light%.*}"
+echo "^c#ebcb8b^$icon ${light%.*}"

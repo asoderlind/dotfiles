@@ -5,4 +5,4 @@ case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
 	down) interneticon="𥉉" ;;
 esac
 
-echo "$interneticon"
+echo "^c#ebcb8b^$interneticon"

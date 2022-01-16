@@ -1,20 +1,44 @@
 #!/bin/bash
 
-batpercent="$(cat /sys/class/power_supply/BAT0/capacity)"
-batstatus="$(cat /sys/class/power_supply/BAT0/status)"
-baticon=" "
-if [ "$batstatus" == "Discharging" ]; then
-	if   [ "$batpercent" -lt "20" ]; then
-		baticon=" "
-	elif [ "$batpercent" -lt "40" ]; then
-		baticon=" "
-	elif [ "$batpercent" -lt "60" ]; then
-		baticon=" "
-	else
-		baticon=" "
-	fi
-elif [ "$batstatus" == "Charging" ]; then
-	baticon=""
-fi
+batstatus=" "
+for bat in /sys/class/power_supply/BAT?; do
 
-echo "$baticon $batpercent%"
+      cap="$(<$bat/capacity)"
+      stat="$(<$bat/status)"
+  
+  i=""
+  c="#a3bc8c"
+
+  if [ "$stat" = "Charging" ]; then
+    i=""
+  elif [ "$cap" -le 14 ]; then
+    i=""
+    c="#bf616a"
+  elif [ "$cap" -le 24 ]; then
+    i=""
+    c="#bf616a"
+  elif [ "$cap" -le 34 ]; then
+    i=""
+  elif [ "$cap" -le 44 ]; then
+    i=""
+    c="#d08770"
+  elif [ "$cap" -le 54 ]; then
+    i=""
+    c="#ebcb8b"
+  elif [ "$cap" -le 64 ]; then
+    i=""
+    c="#ebcb8b"
+  elif [ "$cap" -le 74 ]; then
+    i=""
+    c="#a3bc8c"
+  elif [ "$cap" -le 84 ]; then
+    i=""
+    c="#a3bc8c"
+  elif [ "$cap" -le 94 ]; then
+    c="#a3bc8c"
+    i=""
+  fi
+  batstatus="^c${c}^${i} ${cap}%"
+done
+
+echo "${batstatus}"

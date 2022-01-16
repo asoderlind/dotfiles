@@ -6,5 +6,5 @@ else
   icon=""
 fi
 
-echo "$icon"
+echo "^c#ebcb8b^$icon"
 
