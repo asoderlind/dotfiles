@@ -19,6 +19,7 @@ for bat in /sys/class/power_supply/BAT?; do
     c="#bf616a"
   elif [ "$cap" -le 34 ]; then
     i=""
+    c="#d08770"
   elif [ "$cap" -le 44 ]; then
     i=""
     c="#d08770"
