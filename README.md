@@ -2,8 +2,16 @@
 
 # Usage
 
-To load for the first time, make sure you have stow installed and go to the `~/.local/bin` folder and create a new directory `statusbar`, then while standing in `dotfiles/src` run the executable file stowdot:
+In `~/.config` run
 
-```.local/bin/stowdot```
+```$ mkdir nvim picom shell zxhkd x11 tmux zathura zsh fonconfig lf```
 
-The files and folders are now symlinked to the corresponding ones in the home directory.
+In `~/.local/bin` run
+
+```$ mkdir statusbar```
+
+Make sure you have stow installed, then while standing in `dotfiles/src` run the executable file stowdot:
+
+```$ .local/bin/stowdot```
+
+The files are now symlinked to the corresponding ones in the home directory.
