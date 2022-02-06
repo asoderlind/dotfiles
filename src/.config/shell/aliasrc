@@ -29,7 +29,6 @@ alias \
 # These common commands are just too long! Abbreviate them.
 alias \
 	ka="killall" \
-	g="git" \
 	trem="transmission-remote" \
 	sdn="sudo shutdown -h now" \
 	e="$EDITOR" \
@@ -37,9 +36,20 @@ alias \
 	p="pacman" \
 	z="zathura"
 
+# Git aliases
+alias \
+  ga='git add -A; gs' \
+  gc='git commit -v' \
+  gd='git diff' \
+  gm='gs; ga && gc -m "Minor update" && gp && gs' \
+  gp='git push' \
+  gs='git status' \
+  gu='git pull' \
+  gcb='git checkout -b'
+
 # Other custom aliases
 alias \
-  sc="scrot -d 3 ~/Dropbox/bilder/screenshots/%Y-%m-%d-%T-screenshot.png" \
+  sc="scrot -d 3 ~/Downloads/screenshots/%Y-%m-%d-%T-screenshot.png" \
   su="su -l" \
   db="sudo -u postgres psql -d postgres://postgres:@localhost:42432" \
 
