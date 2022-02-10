@@ -36,6 +36,9 @@ map('n', '<C-l>', '<C-w>l', {noremap=true})
 map('v', '<Leader>c', ":s/^/\\/\\/<CR>:noh<CR>", {noremap=true})
 map('v', '<Leader>x', ":norm 2x<CR>", {noremap=true})
 
+-- better splitting
+map('n', '<Leader>v', ':vsplit<CR>', {noremap=true})
+
 -- custom escape
 map('i', 'jk', '<ESC>', {noremap=true, silent=true})
 map('i', 'kj', '<ESC>', {noremap=true, silent=true})

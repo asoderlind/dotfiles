@@ -6,9 +6,10 @@ end
 ts_config.setup {
    ensure_installed = {
       "lua",
+      "typescript",
+      "graphql"
    },
    highlight = {
       enable = true,
-      use_languagetree = true,
    },
 }

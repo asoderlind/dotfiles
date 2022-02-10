@@ -41,6 +41,7 @@ alias \
   ga='git add -A; gs' \
   gc='git commit -v' \
   gd='git diff' \
+  gl='git log --color --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit' \
   gm='gs; ga && gc -m "Minor update" && gp && gs' \
   gp='git push' \
   gs='git status' \
