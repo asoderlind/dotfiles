@@ -8,16 +8,18 @@ local use = packer.use
 
 --- startup and add configure plugins
 return packer.startup(function()
-
+  -- provides functionality for other plugins
    use {
      "nvim-lua/plenary.nvim",
    }
 
+   -- plugin manager
    use {
      "wbthomason/packer.nvim",
      event = "VimEnter",
    }
 
+  -- icons
   use {
      "kyazdani42/nvim-web-devicons",
      after = "nvim-base16.lua",
@@ -26,6 +28,7 @@ return packer.startup(function()
      end,
   }
 
+  -- lint and prettier servers
   use{
     "jose-elias-alvarez/null-ls.nvim",
     config = function()
@@ -55,6 +58,7 @@ return packer.startup(function()
     end,
   }
 
+  -- file navigation
   use {
     "nvim-telescope/telescope.nvim",
     config = function()
@@ -63,6 +67,15 @@ return packer.startup(function()
     setup = function()
         require("core.mappings").telescope()
     end,
+  }
+
+  -- git stuff
+  use {
+    "lewis6991/gitsigns.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require "plugins.configs.gitsigns"
+    end
   }
 
   use {
@@ -76,7 +89,7 @@ return packer.startup(function()
      end,
   }
 
-  -- lsp stuff
+  -- lsp server install interface
   use {
      "williamboman/nvim-lsp-installer",
      config = function()
@@ -100,6 +113,7 @@ return packer.startup(function()
      end,
   }
 
+  -- better syntax highlighting
   use {
      "nvim-treesitter/nvim-treesitter",
      event = "BufRead",
