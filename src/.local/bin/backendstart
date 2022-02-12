@@ -20,7 +20,12 @@ tmux send-keys -t 'Backend' 'yarn backend:start' C-m
 
 # Create new window for looking at the code 
 tmux new-window -t $session:3 -n 'Coding' -c "$HOME"/repos/troubleshooter
+
+# Start nvim on main window
 tmux send-keys -t 'Coding' "$EDITOR" C-m
+
+# Make a small pane below for executing code
+tmux split-window -v -p 30 -c "$HOME"/repos/troubleshooter
 
 # Attach session, on the code window
 tmux attach-session -t $session:3

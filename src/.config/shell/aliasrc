@@ -52,7 +52,7 @@ alias \
 alias \
   sc="scrot -d 3 ~/Downloads/screenshots/%Y-%m-%d-%T-screenshot.png" \
   su="su -l" \
-  db="sudo -u postgres psql -d postgres://postgres:@localhost:42432" \
+  db="psql -U postgres -W -p 5432 -h localhost" \
 
 # Remove orphaned packages.
 # Needs single quotes, otherwise the newlines that "pacman -Qqdt" outputs
