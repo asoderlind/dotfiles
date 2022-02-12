@@ -44,7 +44,7 @@ map('i', 'jk', '<ESC>', {noremap=true, silent=true})
 map('i', 'kj', '<ESC>', {noremap=true, silent=true})
 
 -- closing
-map('n', '<Leader>x' ,':bd<CR>', {noremap=true})
+map('n', '<Leader>x' ,':bp<bar>sp<bar>bn<bar>bd<CR>', {noremap=true})
 
 -- quicker editing and sourcing of init.lua
 map('n', '<Leader>ve' ,':tabnew /home/axel/.config/nvim/init.lua<CR>', {noremap=true})
