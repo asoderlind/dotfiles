@@ -24,7 +24,7 @@ export LANG=en_US.UTF-8
 # History in home:
 HISTSIZE=1000
 SAVEHIST=1000
-HISTFILE=~/.zsh_history
+HISTFILE=~/.cache/.zsh_history
 
 # Load aliases and shortcuts if existent.
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
