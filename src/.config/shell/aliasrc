@@ -66,4 +66,6 @@ alias \
 #    -d restrict output to packages installed as dependencies
 #    -t list packages that are no longer required by any installed package
 #    -q suppress version numbers of packages (this would confuse pacman -R)
-alias cleanup_packages='(set -x; sudo pacman -Rs $(pacman -Qdtq))'
+alias \
+  remove_orphans='(set -x; sudo pacman -Rs $(pacman -Qdtq))' \
+  orphans='sudo pacman -Qtdq' \
