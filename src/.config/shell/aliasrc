@@ -21,7 +21,9 @@ alias \
 
 # rusty commands
 alias \
-  ls="lsd -la"
+  ls="lsd -la" \
+  lt="ls --tree" \
+  cat="bat" \
 
 # Colorize commands when possible.
 alias \
