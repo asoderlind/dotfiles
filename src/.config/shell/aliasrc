@@ -19,9 +19,12 @@ alias \
 	bc="bc -ql" \
 	mkd="mkdir -pv" \
 
+# rusty commands
+alias \
+  ls="lsd -la"
+
 # Colorize commands when possible.
 alias \
-	ls="ls -ahN --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
@@ -30,8 +33,6 @@ alias \
 alias \
 	ka="killall" \
 	trem="transmission-remote" \
-	sdn="sudo shutdown -h now" \
-	e="$EDITOR" \
 	v="$EDITOR" \
 	p="pacman" \
 	z="zathura"
