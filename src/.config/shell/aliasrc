@@ -69,3 +69,4 @@ alias \
 alias \
   remove_orphans='(set -x; sudo pacman -Rs $(pacman -Qdtq))' \
   orphans='sudo pacman -Qtdq' \
+  how_clean='ls -a | wc -l'
