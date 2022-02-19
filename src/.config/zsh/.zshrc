@@ -21,6 +21,13 @@ PS1='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Basic auto/tab complete
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)
+
 # History in home:
 HISTSIZE=10000
 SAVEHIST=10000
