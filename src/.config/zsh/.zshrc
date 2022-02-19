@@ -22,8 +22,8 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # History in home:
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.cache/.zsh_history
 
 # Load aliases and shortcuts if existent.
@@ -49,4 +49,4 @@ chpwd() ls -a
 
 source ~/.config/zsh/keybindings
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
