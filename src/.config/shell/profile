@@ -14,7 +14,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
 # other
-export BUG_PROJECT="$HOME/.local/todo.bug
+export BUG_PROJECT="$HOME/.local/todo.bug"
 
 # This is the list for lf icons:
 export LF_ICONS="\
