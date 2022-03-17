@@ -37,6 +37,7 @@ alias \
 	trem="transmission-remote" \
 	v="$EDITOR" \
 	p="pacman" \
+  t="todo.sh" \
 	z="zathura"
 
 # Git aliases

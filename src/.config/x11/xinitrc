@@ -6,6 +6,12 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 exec fcitx -d &
 
+# No caps-lock
+setxkbmap -option caps:super
+killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape'
+xset -q | grep "Caps Lock:\s*on" && xdotool key Caps_Lock
+
+
 # Transparency
 picom --experimental-backends &
 

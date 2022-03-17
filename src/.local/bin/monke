@@ -1,11 +1,11 @@
 #!/bin/bash
 
 push () {
-    rsync -vrltzP --progress --update "$@" "$HOME/cloud/" monkebrain.com:cloud/
+    rsync -arv --progress --delete "$HOME/Dropbox/" monkebrain.com:cloud/
 }
 
 pull () {
-    rsync -vrltzP --progress --update "$@" monkebrain.com:cloud/ "$HOME/cloud/" 
+    rsync -arv --progress "$@" monkebrain.com:cloud/ "$HOME/Dropbox/" 
 }
 
 if [ ! -d "$HOME/cloud" ]; then
