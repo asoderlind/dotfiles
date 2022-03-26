@@ -1,15 +1,15 @@
 #!/bin/bash
 
 push () {
-    rsync -arv --progress --delete "$@" "$HOME/Dropbox/" monkebrain.com:cloud/
+    rsync -arv --progress --delete "$@" "$HOME/cloud/" monkebrain.com:cloud/
 }
 
 pull () {
-    rsync -arv --progress "$@" monkebrain.com:cloud/notes/ "$HOME/Dropbox/notes/" 
+    rsync -arv --progress "$@" monkebrain.com:cloud/notes/ "$HOME/cloud/notes/" 
 }
 
-if [ ! -d "$HOME/Dropbox" ]; then
-    mkdir -p "$HOME/Dropbox"
+if [ ! -d "$HOME/cloud" ]; then
+    mkdir -p "$HOME/cloud"
 fi
 
 case "$1" in
