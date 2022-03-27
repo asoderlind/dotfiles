@@ -13,32 +13,33 @@ for bat in /sys/class/power_supply/BAT?; do
     i=""
   elif [ "$stat" = "Not charging" ]; then
     i=""
+    c="#ebcb8b"
   elif [ "$cap" -le 18 ]; then
     dunstify -h string:x-dunst-stack-tag:test "Battery level critical!" "Connect to a charger asap"
     i=""
     c="#bf616a"
-  elif [ "$cap" -le 24 ]; then
+  elif [ "$cap" -le 20 ]; then
     i=""
     c="#bf616a"
-  elif [ "$cap" -le 34 ]; then
+  elif [ "$cap" -le 30 ]; then
     i=""
     c="#d08770"
-  elif [ "$cap" -le 44 ]; then
+  elif [ "$cap" -le 40 ]; then
     i=""
     c="#d08770"
-  elif [ "$cap" -le 54 ]; then
+  elif [ "$cap" -le 50 ]; then
     i=""
     c="#ebcb8b"
-  elif [ "$cap" -le 64 ]; then
+  elif [ "$cap" -le 60 ]; then
     i=""
     c="#ebcb8b"
-  elif [ "$cap" -le 74 ]; then
+  elif [ "$cap" -le 70 ]; then
     i=""
     c="#a3bc8c"
-  elif [ "$cap" -le 84 ]; then
+  elif [ "$cap" -le 80 ]; then
     i=""
     c="#a3bc8c"
-  elif [ "$cap" -le 94 ]; then
+  elif [ "$cap" -le 90 ]; then
     c="#a3bc8c"
     i=""
   fi
