@@ -8,6 +8,10 @@ pull () {
     rsync -arv --progress "$@" monkebrain.com:cloud/notes/ "$HOME/cloud/notes/" 
 }
 
+publish () {
+  rsync -arv --progress "$@" "$HOME/repos/minpage/output/" monkebrain.com:blog/ 
+}
+
 if [ ! -d "$HOME/cloud" ]; then
     mkdir -p "$HOME/cloud"
 fi
@@ -15,4 +19,5 @@ fi
 case "$1" in
     "push") shift; push "$@" ;;
     "pull") shift; pull "$@" ;;
+    "publish") shift; publish "$@" ;;
 esac
