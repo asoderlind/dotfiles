@@ -9,6 +9,8 @@ pull () {
 }
 
 publish () {
+  cd "$HOME/repos/minpage" &&
+  python3 basic.py &&
   rsync -arv --progress "$@" "$HOME/repos/minpage/output/" monkebrain.com:blog/ 
 }
 
