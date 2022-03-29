@@ -1,11 +1,17 @@
 #!/bin/bash
 
 push () {
-    rsync -arv --progress --delete "$@" "$HOME/cloud/" monkebrain.com:cloud/
+  rsync -arv --progress --delete "$@" "$HOME/cloud/" monkebrain.com:cloud/
 }
 
 pull () {
-    rsync -arv --progress "$@" monkebrain.com:cloud/notes/ "$HOME/cloud/notes/" 
+  rsync -arv --progress "$@" monkebrain.com:cloud/notes/ "$HOME/cloud/notes/" 
+}
+
+sync () {
+  rsync -arv --progress monkebrain.com:cloud/notes/ "$HOME/cloud/notes/" &&
+  rsync -arv --progress --delete "$@" "$HOME/cloud/" monkebrain.com:cloud/
+
 }
 
 publish () {
@@ -22,4 +28,5 @@ case "$1" in
     "push") shift; push "$@" ;;
     "pull") shift; pull "$@" ;;
     "publish") shift; publish "$@" ;;
+    "sync") shift; sync "$@" ;;
 esac
