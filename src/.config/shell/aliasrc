@@ -35,7 +35,7 @@ alias \
 alias \
 	ka="killall" \
 	trem="transmission-remote" \
-  e="emacsclient -nw -a 'emacs'" \
+  e="emacsclient -nc -a 'emacs'" \
 	v="$EDITOR" \
 	p="pacman" \
   t="todo.sh" \
