@@ -6,9 +6,14 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 exec fcitx -d &
 
+# matlab jank
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Transparency
 picom --experimental-backends &
+
+# Start emacs daemon
+emacs --daemon &
 
 # Top bar
 dwmblocks &
