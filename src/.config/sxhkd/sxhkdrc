@@ -11,3 +11,6 @@ super + d
 
 {XF86AudioLowerVolume, XF86AudioRaiseVolume}
 	pamixer --allow-boost -{d,i} 5 && kill -44 $(pidof dwmblocks)
+
+{XF86Display}
+  /home/axel/.local/bin/toggle_pad
