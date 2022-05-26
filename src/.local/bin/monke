@@ -15,9 +15,9 @@ sync () {
 }
 
 publish () {
-  cd "$HOME/repos/minpage" &&
-  python3 basic.py &&
-  rsync -arv --progress "$@" "$HOME/repos/minpage/output/" monkebrain.com:blog/ 
+  cd "$HOME/cloud/org/my-org-site"
+  emacs -Q --script "build-site.el"
+  rsync -arv --progress "$@" "$HOME/cloud/org/my-org-site/public/" monkebrain.com:blog/ 
 }
 
 if [ ! -d "$HOME/cloud" ]; then
