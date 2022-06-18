@@ -58,6 +58,7 @@ alias \
   sc="scrot -d 3 ~/Downloads/screenshots/%Y-%m-%d-%T-screenshot.png" \
   su="su -l" \
   db="psql -U postgres -W -p 5432 -h localhost" \
+  zipfolders="for i in */; do zip -r "${i%/}.zip" "$i"; done"
 
 # Remove orphaned packages.
 # Needs single quotes, otherwise the newlines that "pacman -Qqdt" outputs

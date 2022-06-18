@@ -14,3 +14,9 @@ super + d
 
 {XF86Display}
   /home/axel/.local/bin/toggle_pad
+
+shift + Print
+    maim -su | xclip -selection c -t image/png
+
+ctrl + Print
+    maim -i \"$(xdotool getactivewindow)\" | xclip -selection c -t image/png
