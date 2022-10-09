@@ -11,7 +11,15 @@ pull () {
 sync () {
   rsync -arv --progress monkebrain.com:cloud/notes/ "$HOME/cloud/notes/" &&
   rsync -arv --progress --delete "$@" "$HOME/cloud/" monkebrain.com:cloud/
+}
 
+mount () {
+  sudo mount -t davfs https://webdav.monkebrain.com $HOME/dav
+}
+
+dav () {
+  rsync -arv --progress "$@" "$HOME/dav/notability" "$HOME/cloud/dav_backup"
+  rsync -arv --progress "$@" "$HOME/dav/shared" "$HOME/cloud/dav_backup"
 }
 
 publish () {
@@ -29,4 +37,6 @@ case "$1" in
     "pull") shift; pull "$@" ;;
     "publish") shift; publish "$@" ;;
     "sync") shift; sync "$@" ;;
+    "mount") shift; mount "$@" ;;
+    "dav") shift; dav "$@" ;;
 esac

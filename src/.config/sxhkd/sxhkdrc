@@ -6,6 +6,9 @@ super + w
 super + d
 	dmenu_run
 
+super + shift + t
+   thunar
+
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
 	xbacklight -{inc,dec} 5 && kill -46 $(pidof dwmblocks)
 
