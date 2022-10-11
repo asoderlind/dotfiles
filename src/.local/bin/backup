@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo mount /dev/sda1 /mnt/ssd_backup
+sudo mkdir -p /mnt/ssd_backup/$(date +%Y%m%d)
+rsync -arv --progress /home/axel/cloud/ /mnt/ssd_backup/$(date +%Y%m%d)

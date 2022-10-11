@@ -9,6 +9,9 @@ super + d
 super + shift + t
    thunar
 
+{XF86AudioMute}
+  amixer set Master toggle
+
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
 	xbacklight -{inc,dec} 5 && kill -46 $(pidof dwmblocks)
 
