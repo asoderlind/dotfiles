@@ -1,4 +1,6 @@
 #Application
+#
+setxkbmap -option caps:escape
 
 super + w
 	"$BROWSER"
