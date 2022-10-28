@@ -21,6 +21,9 @@ dwmblocks &
 # Increase keypress freq
 xset r rate 200 40 &
 
+# Remap caps to escape
+setxkbmap -option caps:escape
+
 # Load xresources
 xrdb "$HOME/.config/x11/xresources"
 
