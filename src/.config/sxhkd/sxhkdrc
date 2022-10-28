@@ -13,11 +13,8 @@ super + shift + t
 {XF86AudioMute}
   amixer set Master toggle
 
-{XF86MonBrightnessUp}
-  changebrightness up
-
-{XF86MonBrightnessDown}
-  changebrightness down
+{XF86MonBrightnessUp,XF86MonBrightnessDown}
+	xbacklight -{inc,dec} 5 && kill -46 $(pidof dwmblocks)
 
 {XF86AudioLowerVolume, XF86AudioRaiseVolume}
 	pamixer --allow-boost -{d,i} 5 && kill -44 $(pidof dwmblocks)
