@@ -13,17 +13,17 @@ super + shift + t
 {XF86AudioMute}
   amixer set Master toggle
 
-{XF86MonBrightnessUp,XF86MonBrightnessDown}
-	xbacklight -{inc,dec} 5 && kill -46 $(pidof dwmblocks)
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+  changebrightness {up, down} && kill -46 $(pidof dwmblocks)
 
 {XF86AudioLowerVolume, XF86AudioRaiseVolume}
 	pamixer --allow-boost -{d,i} 5 && kill -44 $(pidof dwmblocks)
 
 {XF86Display}
-  /home/axel/.local/bin/toggle_pad
+  toggle_pad
 
 shift + Print
-    maim -su | xclip -selection c -t image/png
+  maim -su | xclip -selection c -t image/png
 
 ctrl + Print
-    maim -i \"$(xdotool getactivewindow)\" | xclip -selection c -t image/png
+  maim -i \"$(xdotool getactivewindow)\" | xclip -selection c -t image/png
