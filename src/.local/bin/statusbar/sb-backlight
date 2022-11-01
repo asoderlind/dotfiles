@@ -1,6 +1,7 @@
 #!/bin/bash
 
+brightness=$(printf "%.0f\n" $(brillo -G))
 light="$(xbacklight -get)"
 icon="盛"
 
-echo "^c#ebcb8b^$icon ${light%.*}"
+echo "^c#ebcb8b^$icon ${brightness%.*}"
