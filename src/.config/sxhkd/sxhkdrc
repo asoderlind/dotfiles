@@ -10,6 +10,18 @@ super + d
 super + shift + t
    thunar
 
+super + shift + a
+  anki
+
+super + shift + g
+  gnucash
+
+super + shift + k
+  keepassxc
+
+super + shift + s
+  spotify
+
 {XF86AudioMute}
   amixer set Master toggle
 

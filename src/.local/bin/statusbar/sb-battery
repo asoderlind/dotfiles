@@ -15,7 +15,6 @@ for bat in /sys/class/power_supply/BAT?; do
     i=""
     c="#ebcb8b"
   elif [ "$cap" -le 18 ]; then
-    dunstify -h string:x-dunst-stack-tag:test "Battery level critical!" "Connect to a charger asap"
     i=""
     c="#bf616a"
   elif [ "$cap" -le 20 ]; then

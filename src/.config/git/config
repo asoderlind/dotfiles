@@ -1,0 +1,8 @@
+[User]
+  name = asoderlind
+  email = axesode@gmail.com
+[color]
+  ui = true
+[branch]
+  autoSetupRemote = true
+

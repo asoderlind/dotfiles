@@ -1,11 +1,13 @@
 #!/bin/zsh
 # add .local/bin to path
-export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}:$HOME/.emacs.d/bin"
+export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}:$HOME/.emacs.d/bin:$HOME/.cargo/bin:$HOME/.local/share/gem/ruby/3.0.0/bin"
 
 # default
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="firefox"
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US:en"
 
 # clean ~
 export XDG_CONIFG_HOME="$HOME/.config"
