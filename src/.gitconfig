@@ -1,0 +1,25 @@
+[User]
+  name = asoderlind
+  email = axesode@gmail.com
+[init]
+  defaultBranch = master
+[color]
+  ui = true
+[branch]
+  autoSetupRemote = true
+[core]
+  editor = nvim	
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	pager = delta
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+[github]
+  user = asoderlind
