@@ -1,4 +1,15 @@
-# dotfiles
+# my dotfiles
+
+## zsh plugins
+
+### ![autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+`git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions`
+### ![syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+`git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting`
+
+## Rusty tools
+
+* ![lsd]()
 
 # Usage
 
