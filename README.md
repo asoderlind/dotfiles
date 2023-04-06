@@ -13,7 +13,11 @@
 
 ## Rusty tools
 
-* ![lsd]()
+### LSD
+
+Installation: 
+1. `wget https://github.com/lsd-rs/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb` 
+2. `sudo dpkg -i lsd_0.23.1_amd64.deb`
 
 # Usage
 
