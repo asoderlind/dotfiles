@@ -2,6 +2,10 @@
 
 ## zsh plugins
 
+### Settings
+
+`$ ln -s ~/repos/dotfiles/src/.config/shell/profile ~/.zprofile`
+
 ### ![autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 `git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions`
 ### ![syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
