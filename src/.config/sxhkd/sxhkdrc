@@ -38,4 +38,4 @@ shift + Print
   maim -su | xclip -selection c -t image/png
 
 ctrl + Print
-  maim -i \"$(xdotool getactivewindow)\" | xclip -selection c -t image/png
+  maim -i $(xdotool getactivewindow) | xclip -selection c -t image/png
