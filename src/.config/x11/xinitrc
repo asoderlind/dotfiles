@@ -12,9 +12,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Transparency
 picom --experimental-backends &
 
-# Start emacs daemon
-emacs --daemon &
-
 # Top bar
 dwmblocks &
 
@@ -22,16 +19,14 @@ dwmblocks &
 xset r rate 200 40 &
 
 # Remap caps to escape
-setxkbmap -option caps:escape
+xmodmap -e "clear lock"
+xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 
 # Load xresources
 xrdb "$HOME/.config/x11/xresources"
 
 # Keybindings
 sxhkd &
-
-# Wallpaper
-xwallpaper --zoom /home/axel/.local/share/bg
 
 # Notifications
 dunst &
