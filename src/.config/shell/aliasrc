@@ -23,7 +23,6 @@ alias \
 alias \
   ls="lsd -la" \
   lt="ls --tree" \
-  cat="bat" \
 
 # Colorize commands when possible.
 alias \
@@ -33,9 +32,6 @@ alias \
 
 # These common commands are just too long! Abbreviate them.
 alias \
-	ka="killall" \
-	trem="transmission-remote" \
-  e="emacsclient -nc -a 'emacs'" \
 	v="$EDITOR" \
 	p="pacman" \
   t="todo.sh" \
@@ -57,7 +53,6 @@ alias \
 alias \
   sc="scrot -d 3 ~/Downloads/screenshots/%Y-%m-%d-%T-screenshot.png" \
   su="su -l" \
-  db="psql -U postgres -W -p 5432 -h localhost" \
   zipfolders="for i in */; do zip -r "${i%/}.zip" "$i"; done"
 
 # Remove orphaned packages.
