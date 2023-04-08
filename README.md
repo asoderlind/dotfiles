@@ -5,11 +5,12 @@
 * ![autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 * ![syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
-## Rusty tools
+## Tools
 
 * LSD
+* lf
 
-# Installation steps:
+# Installation
 
 Run: `./install_dotfiles`
 
