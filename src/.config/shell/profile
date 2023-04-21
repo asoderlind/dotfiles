@@ -1,6 +1,6 @@
 #!/bin/zsh
 # add .local/bin to path
-export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}:$HOME/.emacs.d/bin:$HOME/.cargo/bin:$HOME/.local/share/gem/ruby/3.0.0/bin"
+export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}:$HOME/.npm-global/bin:$HOME/.cargo/bin:$HOME/.local/share/gem/ruby/3.0.0/bin"
 
 # default
 export EDITOR="nvim"

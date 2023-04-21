@@ -47,7 +47,8 @@ alias \
   gp='git push' \
   gs='git status' \
   gu='git pull' \
-  gcb='git checkout -b'
+  gcb='git checkout -b' \
+  gcm='git checkout master && git pull'
 
 # Other custom aliases
 alias \
