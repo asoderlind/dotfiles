@@ -1,8 +1,8 @@
 #!/bin/bash
 
 case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
-	up) interneticon="囹" ;;
-	down) interneticon="𥉉" ;;
+	up) interneticon="󰖩" ;;
+	down) interneticon="󰖪" ;;
 esac
 
 echo "^c#ebcb8b^$interneticon"

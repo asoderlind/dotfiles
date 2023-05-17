@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Check if FFmpeg is installed
+if ! command -v ffmpeg >/dev/null; then
+  echo "FFmpeg is not installed. Please install FFmpeg and try again."
+  exit 1
+fi
+
+# Check if a directory is provided
+if [ -z "$1" ]; then
+  echo "Usage: $0 /path/to/directory"
+  exit 1
+fi
+
+# Check if the provided path is a directory
+if [ ! -d "$1" ]; then
+  echo "Error: $1 is not a directory."
+  exit 1
+fi
+
+# Loop through .mov files in the directory
+for file in "$1"/*.mov; do
+  # Check if the file exists
+  if [ -f "$file" ]; then
+    # Create a new compressed output file with the same name and a "-compressed" suffix
+    output_file="${file%.mov}-compressed.mov"
+
+    # Compress the video using FFmpeg
+    ffmpeg -i "$file" -c:v libx264 -crf 23 -c:a aac -b:a 128k -movflags +faststart "$output_file"
+
+    echo "Compressed: $file -> $output_file"
+  fi
+done
+
+echo "Compression completed."
+

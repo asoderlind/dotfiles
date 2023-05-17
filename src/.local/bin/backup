@@ -1,5 +1,3 @@
 #!/bin/bash
-
-sudo mount /dev/sda1 /mnt/ssd_backup
-sudo mkdir -p /mnt/ssd_backup/$(date +%Y%m%d)
-rsync -arv --progress /home/axel/cloud/ /mnt/ssd_backup/$(date +%Y%m%d)
+sudo mkdir -p /run/media/axel/TV\ and\ Movies/$(date +%Y%m%d)
+rsync -arv --progress /home/axel/Nextcloud/external/ /run/media/axel/TV\ and\ Movies/$(date +%Y%m%d)/

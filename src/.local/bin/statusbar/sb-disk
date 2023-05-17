@@ -10,7 +10,7 @@ location=${1:-/}
 case "$location" in
 	"/home"* ) icon=" " ;;
 	"/mnt"* ) icon=" " ;;
-	*) icon=" ";;
+	*) icon="󰋊 ";;
 esac
 
 echo "^c#ebcb8b^$icon$(df -h "$location" | awk ' /[0-9]/ {print $3 "/" $2}')"

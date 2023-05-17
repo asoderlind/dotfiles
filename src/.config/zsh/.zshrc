@@ -36,7 +36,7 @@ HISTFILE=~/.cache/.zsh_history
 # Load aliases and shortcuts if existent.
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
 
-# Use lf to switch directories and bind it to ctrl-o
+# Use lf to switch directories
 lfcd () {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
@@ -48,7 +48,10 @@ lfcd () {
 }
 
 # Keybindings
+# 
+# Bind ctrl + o to lf
 bindkey -s '^o' 'lfcd\n'
+# Bind ctrl + f to fuzzy find
 bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
 # ls after cd

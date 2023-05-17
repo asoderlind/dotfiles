@@ -2,6 +2,6 @@
 
 brightness=$(printf "%.0f\n" $(brillo -G))
 light="$(xbacklight -get)"
-icon="盛"
+icon=""
 
 echo "^c#ebcb8b^$icon ${brightness%.*}"

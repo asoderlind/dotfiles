@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "^c#ebcb8b^ $(grep -o "^[^ ]*" /proc/loadavg)"
+echo "^c#ebcb8b^ $(grep -o "^[^ ]*" /proc/loadavg)"

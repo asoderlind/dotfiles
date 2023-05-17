@@ -10,37 +10,37 @@ for bat in /sys/class/power_supply/BAT?; do
   c="#a3bc8c"
 
   if [ "$stat" = "Charging" ]; then
-    i=""
+    i="󰂄"
   elif [ "$stat" = "Not charging" ]; then
-    i=""
+    i="󰂑"
     c="#ebcb8b"
   elif [ "$cap" -le 18 ]; then
-    i=""
+    i="󰁺"
     c="#bf616a"
   elif [ "$cap" -le 20 ]; then
-    i=""
+    i="󰁻"
     c="#bf616a"
   elif [ "$cap" -le 30 ]; then
-    i=""
+    i="󰁼"
     c="#d08770"
   elif [ "$cap" -le 40 ]; then
-    i=""
+    i="󰁽"
     c="#d08770"
   elif [ "$cap" -le 50 ]; then
-    i=""
+    i="󰁾"
     c="#ebcb8b"
   elif [ "$cap" -le 60 ]; then
-    i=""
+    i="󰁿"
     c="#ebcb8b"
   elif [ "$cap" -le 70 ]; then
-    i=""
+    i="󰂀"
     c="#a3bc8c"
   elif [ "$cap" -le 80 ]; then
-    i=""
+    i="󰂁"
     c="#a3bc8c"
   elif [ "$cap" -le 90 ]; then
     c="#a3bc8c"
-    i=""
+    i="󰂂"
   fi
   batstatus="^c${c}^${i} ${cap}%"
 done
