@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Set the server and directory
+SERVER="axel@15.168.13.29"
+DIR="/home/axel/db_dump"
+
+# Get the list of files
+FILES=$(ssh $SERVER "ls $DIR")
+
+# Print the files and ask the user to choose one
+echo "Please select a file to restore:"
+select FILENAME in $FILES; do
+  if [ -n "$FILENAME" ]; then
+    break
+  else
+    echo "Invalid selection. Please try again."
+  fi
+done
+
+# Copy the selected file to the local machine
+scp "$SERVER:$DIR/$FILENAME" .
+
+# Restore the database
+cat "$FILENAME" | docker exec -i django-db psql -U postgres
+
+# Optionally, delete the local copy of the dump file
+rm "$FILENAME"
