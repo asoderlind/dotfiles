@@ -1,3 +1,28 @@
 #!/bin/bash
-sudo mkdir -p /run/media/axel/TV\ and\ Movies/$(date +%Y%m%d)
-rsync -arv --progress /home/axel/Nextcloud/external/ /run/media/axel/TV\ and\ Movies/$(date +%Y%m%d)/
+
+# Get today's date
+today=$(date +%Y%m%d)
+
+# Create directory for which to mount
+sudo mkdir -p /mnt/ssd_backup
+
+# Clean cache and temporary files
+rm -rf ~/.cache/*
+
+# Uninstall unused packages
+sudo pacman -Rns $(pacman -Qdtq)
+
+# Mount the backup drive
+sudo mount /dev/sda1 /mnt/ssd_backup
+
+# Freeze pacman packages
+sudo pacman -Qqen > /home/axel/pacman_packages.txt
+
+# Create backup dir for today
+sudo mkdir -p /mnt/ssd_backup/$(date +%Y%m%d)/Nextcloud
+sudo mkdir -p /mnt/ssd_backup/$(date +%Y%m%d)/Downloads
+
+# Backup the home directory
+rsync -arv --progress /home/axel/Nextcloud/ /mnt/ssd_backup/$(date +%Y%m%d)/Nextcloud/
+rsync -arv --progress /home/axel/Downloads/ /mnt/ssd_backup/$(date +%Y%m%d)/Downloads/
+

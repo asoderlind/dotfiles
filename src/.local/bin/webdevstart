@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Session name
+session="dev"
+
+# Grab the repo name as an argument
+repo="$HOME"/repos/django-react
+venv="$HOME"/.envs/django-react
+
+# Start New Session with our name
+tmux new-session -d -s $session -c "$repo"/tssite
+
+# Name first window
+tmux rename-window -t 0 'React'
+tmux send-keys -t 'React' 'yarn start' C-m
+
+# Create second window
+tmux new-window -t $session:1 -n 'Django' -c "$repo"/backend
+tmux send-keys -t 'Django' 'source "$venv"/bin/activate' C-m
+tmux send-keys -t 'Django' 'python manage.py runserver' C-m
+
+# Create new window for looking at the code 
+tmux new-window -t $session:2 -n 'Coding' -c "$repo"
+
+# Start nvim on main window
+tmux send-keys -t 'Coding' "$EDITOR" C-m
+
+# Make a small pane below for executing code
+tmux split-window -v -p 30 -c "$repo"
+
+# Attach session, on the code window
+tmux attach-session -t $session:2
