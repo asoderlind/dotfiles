@@ -21,7 +21,6 @@ alias \
 
 # rusty commands
 alias \
-  ls="lsd -la" \
   lt="ls --tree" \
 
 # Colorize commands when possible.
@@ -67,5 +66,4 @@ alias \
 #    -q suppress version numbers of packages (this would confuse pacman -R)
 alias \
   remove_orphans='(set -x; sudo pacman -Rs $(pacman -Qdtq))' \
-  orphans='sudo pacman -Qtdq' \
   how_clean='ls -a | wc -l'

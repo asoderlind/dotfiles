@@ -7,11 +7,6 @@ if ! command -v zsh >/dev/null 2>&1; then
 		    chsh -s $(which zsh)
 fi
 
-# Install LSD
-wget https://github.com/lsd-rs/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb
-sudo dpkg -i lsd_0.23.1_amd64.deb
-rm lsd_0.23.1_amd64.deb
-
 # Config
 cd ~/.config
 mkdir -p nvim picom shell zsh zshkd x11 tmux zathura fontconfig lf
