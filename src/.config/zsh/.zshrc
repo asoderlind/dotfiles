@@ -60,3 +60,12 @@ chpwd() ls -a
 source ~/.config/zsh/keybindings
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# pnpm
+export PNPM_HOME="/Users/axel/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+[ -f "/Users/axel/.ghcup/env" ] && . "/Users/axel/.ghcup/env" # ghcup-env

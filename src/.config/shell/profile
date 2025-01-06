@@ -2,6 +2,10 @@
 # add .local/bin to path
 export PATH="/opt/homebrew/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}"
 
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
 # default
 export EDITOR="nvim"
 export BROWSER="firefox"
