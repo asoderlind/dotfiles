@@ -43,8 +43,21 @@ else
     echo "Warning: stowdot script not found at $DOTFILES_DIR/src/.local/bin/stowdot"
 fi
 
-# ZSH config
+# ZSH config - create .zshenv to set ZDOTDIR
 if [[ -f "$DOTFILES_DIR/src/.config/shell/profile" ]]; then
+    # Create .zshenv to point to the config directory
+    if [[ ! -e "$HOME/.zshenv" ]]; then
+        echo "Creating .zshenv to set ZDOTDIR..."
+        cat > "$HOME/.zshenv" << 'EOF'
+# Set ZDOTDIR to use zsh config from .config/zsh
+export ZDOTDIR="${HOME}/.config/zsh"
+EOF
+        echo "✓ .zshenv created"
+    else
+        echo "✓ .zshenv already exists"
+    fi
+    
+    # Link .zprofile
     if [[ ! -e "$HOME/.zprofile" ]]; then
         echo "Linking .zprofile..."
         ln -s "$DOTFILES_DIR/src/.config/shell/profile" "$HOME/.zprofile"
