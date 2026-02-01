@@ -1,3 +1,0 @@
-#!/bin/bash
-
-echo "^c#ebcb8b^ $(date +"%m月%d日(%a)")  $(date +%H:%M) "

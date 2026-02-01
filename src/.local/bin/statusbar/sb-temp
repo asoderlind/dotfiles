@@ -1,2 +1,0 @@
-#!/bin/bash
-echo "^c#ebcb8b^  $(sensors thinkpad-isa-0000 | awk '/^CPU/ {print $2}')"

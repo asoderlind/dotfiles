@@ -1,2 +1,0 @@
-#!/bin/bash
-ssh -i /home/axel/.ssh/djangoletsencrypt.pem ubuntu@43.207.186.106
